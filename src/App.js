@@ -1,7 +1,21 @@
 import { Component } from 'react';
 import './App.css';
-import SearchBox from './SearchBox';
-import Card from './Card';
+import SearchBox from './Comp/SearchBox';
+import Card from './Comp/Card';
+import Logo from './Comp/Logo';
+import Particles from 'react-particles-js';
+
+const particle = {
+  particles: {
+    number: {
+      value: 50,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+  },
+};
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +65,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Particles className="Particles" params={particle} />
         <title>PokeDex</title>
+        <Logo />
         <h1>PokeDex</h1>
         <SearchBox
           change={this.change}

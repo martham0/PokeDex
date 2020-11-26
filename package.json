@@ -9,7 +9,9 @@
     "pokemon-font": "^1.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-particles-js": "^3.4.1",
     "react-scripts": "4.0.1",
+    "react-tilt": "^0.1.4",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
