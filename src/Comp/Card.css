@@ -1,20 +1,29 @@
 .card {
   text-align: center;
   outline-style: auto;
-  width: 400px;
+  width: 500px;
   margin-bottom: 10%;
+  /* margin-: 10%; */
   margin: auto;
   font-size: 30px;
   -webkit-font-smoothing: none;
   font-family: 'pokemon-font', monospace;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
-.photo {
-  max-width: 100%;
-  height: auto;
+img {
+  height: 100%;
+
+  padding: 0px;
 }
 
 @font-face {
   font-family: 'Pokemon_Hollow';
-  src: local('Pokemon_Hollow'), url(./Pokemon_Hollow.ttf) format('truetype');
+  src: local('Pokemon_Hollow'),
+    url(../fonts/Pokemon_Hollow.ttf) format('truetype');
+}
+
+h2 {
+  font-family: Pokemon_Hollow;
+  font-size: 85px;
+  color: black;
 }
