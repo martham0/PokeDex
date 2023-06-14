@@ -50,6 +50,7 @@ class App extends Component {
         // Fix this so if it only has 1 type no comma
         pok.types.map((tp) => {
           allTps.push(tp.type.name + '|');
+          return null;
         });
         this.setState({
           type: allTps,
