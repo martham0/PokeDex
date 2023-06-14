@@ -1,9 +1,11 @@
+import React from 'react';
 import { Component } from 'react';
 import './App.css';
 import SearchBox from './Comp/SearchBox';
 import Card from './Comp/Card';
 import Logo from './Comp/Logo';
 import Particles from 'react-particles-js';
+import pokBall from './Comp/img/pokeball.png';
 
 const particle = {
   particles: {
@@ -16,41 +18,44 @@ const particle = {
     },
   },
 };
-// extra comments
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      image: '',
+      image: pokBall,
       type: [],
-      name: '',
+      search: '',
+      // name: '',
       url: 'https://pokeapi.co/api/v2/pokemon/',
-      imgUrl: 'https://pokeres.bastionbot.org/images/pokemon/',
+      // imgUrl: ,
       found: true,
     };
   }
 
   change = (event) => {
     this.setState({
-      name: event.target.value,
+      search: event.target.value,
       found: true,
-      image: '',
-      type: [],
+      // image: '',
+      // type: [],
     });
   };
 
   submit = (event) => {
-    let allTps = [];
-    fetch(this.state.url + this.state.name.toLowerCase())
+    let allTps = ['|'];
+    fetch(this.state.url + this.state.search.toLowerCase())
       .then((res) => res.json())
       .then((pok) => {
+        // Fix this so if it only has 1 type no comma
         pok.types.map((tp) => {
-          allTps.push(tp.type.name + ', ');
+          allTps.push(tp.type.name + '|');
+          return null;
         });
         this.setState({
           type: allTps,
-          image: this.state.imgUrl + `${pok.id}.png`,
+          image: pok.sprites.front_default,
+          name: pok.name,
         });
       })
       .catch((error) => {
@@ -62,7 +67,7 @@ class App extends Component {
         );
       });
   };
-
+  // temp comments for now
   render() {
     return (
       <div className="App">
@@ -75,6 +80,7 @@ class App extends Component {
           submit={this.submit}
           name={this.state.name}
         />
+        {/* ADD a randamozied button to randomly search a pokemon https://www.npmjs.com/package/pokemon */}
         <h2>{this.state.found}</h2>
         <Card
           name={this.state.name}

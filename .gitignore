@@ -1,1 +1,11 @@
+# Dependency directories
 node_modules
+build
+
+### macOS ###
+# General
+.DS_Store
+
+# Debugging
+.vscode/
+.eslintcache

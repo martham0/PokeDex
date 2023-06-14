@@ -1,6 +1,6 @@
 import Tilt from 'react-tilt';
 import './Logo.css';
-import pokedex from './pokedex.png';
+import pokedex from './img/pokedex.png';
 
 function Logo() {
   return (
