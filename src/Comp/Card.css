@@ -2,7 +2,7 @@
   text-align: center;
   outline-style: auto;
   width: 500px;
-  margin-bottom: 10%;
+  margin-bottom: initial;
   /* margin-: 10%; */
   margin: auto;
   font-size: 30px;
@@ -11,9 +11,9 @@
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 img {
-  height: 100%;
-
-  padding: 0px;
+  height: 200%;
+  margin: initial;
+  padding: initial;
 }
 
 @font-face {
@@ -22,8 +22,17 @@ img {
     url(../fonts/Pokemon_Hollow.ttf) format('truetype');
 }
 
-h2 {
+.pokemon_name {
   font-family: Pokemon_Hollow;
   font-size: 85px;
   color: black;
+  padding: 20px;
+  padding-bottom: initial;
+  margin-bottom: initial;
+  letter-spacing: 11px;
+}
+
+h3 {
+  margin-top: initial;
+  padding-bottom: 20px;
 }

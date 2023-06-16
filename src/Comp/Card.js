@@ -9,10 +9,9 @@ function Card(props) {
       <div>
         <Tilt options={{ max: 38 }}>
           <div className="card">
-            <h2 className="poke"> {props.name}</h2>
+            <h2 className="pokemon_name"> {props.name}</h2>
             <img width="200px" src={props.img} alt="" />
             <h3>
-              {' '}
               Type:
               <br />
               {props.type}
@@ -27,7 +26,7 @@ function Card(props) {
         <div className="card">
           <h2 className="poke">
             Sorry, we couldn't find {'\n'}
-            {props.name}. {'\n'}Try again.
+            {props.name}.
           </h2>
           <img width="200px" src={pok} alt="" />
         </div>
