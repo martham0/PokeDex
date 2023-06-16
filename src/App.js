@@ -37,8 +37,6 @@ class App extends Component {
     this.setState({
       search: event.target.value,
       found: true,
-      // image: '',
-      // type: [],
     });
   };
 
@@ -61,9 +59,10 @@ class App extends Component {
       .catch((error) => {
         this.setState({
           found: false,
+          name: this.state.search,
         });
         console.log(
-          'Sorry no pokemon could be found. Check spelling and try again'
+          'Sorry pokemon could not be found. Check spelling and try again'
         );
       });
   };
@@ -81,7 +80,6 @@ class App extends Component {
           name={this.state.name}
         />
         {/* ADD a randamozied button to randomly search a pokemon https://www.npmjs.com/package/pokemon */}
-        <h2>{this.state.found}</h2>
         <Card
           name={this.state.name}
           type={this.state.type}

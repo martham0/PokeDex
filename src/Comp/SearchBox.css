@@ -1,0 +1,30 @@
+button {
+  font-family: 'pokemon-font', monospace;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+input[type='text'] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+input[type='text']::placeholder {
+  /* CSS styles for the placeholder text */
+  color: black;
+  font-size: 19px;
+  opacity: 0.5;
+}
+@font-face {
+  font-family: 'Pokemon_Hollow';
+  src: local('Pokemon_Hollow'),
+    url(../fonts/Pokemon_Hollow.ttf) format('truetype');
+}
